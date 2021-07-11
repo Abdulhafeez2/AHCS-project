@@ -1,0 +1,159 @@
+{% extends 'receptionist_dashboard_base.html' %}
+{% block content %}
+<div class="card card-success">
+          <div class="card-header">
+            <h3 class="card-title">Patient Registration Form</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <form method="POST" action=" ">
+                {%csrf_token%}
+                
+              <div class="row">
+                <div class="col-sm-4">
+                  <!-- text input -->
+                  <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" name="first_name" class="form-control" placeholder="Enter ...">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>Middle Name</label>
+                    <input type="text" name="middle_name" class="form-control" placeholder="Enter ...">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Last Name</label>
+                      <input type="text" name="last_name" class="form-control" placeholder="Enter ...">
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                      <label>Date Of Birth</label>
+                      <input type="datetime-local" name="date_of_birth" class="form-control" placeholder="Enter ...">
+                    </div>
+                  </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>Gender</label>
+                   <select name="sex" class="form-control">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Age</label>
+                      <input type="number" name="age" class="form-control" value="20">                    </div>
+                  </div>
+              </div>
+              <br>
+              <hr>
+              <br>
+              <div class="row">
+                <div class="col-sm-4">
+                  <!-- text input -->
+                  <div class="form-group">
+                    <label>Region</label>
+                    <select name="region" class="form-control">
+                        <option value="Tigray">Tigray</option>
+                        <option value="Amhara">Amhara</option>
+                        <option value="Afar">Afar</option>
+                        <option value="Oromia">Oromia</option>
+                        <option value="Somale">Somale</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>Zone</label>
+                    <input type="text" name="zone" class="form-control" placeholder="Enter ...">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Woreda/Subcity</label>
+                      <input type="text" name="woreda" class="form-control" placeholder="Enter ...">
+                    </div>
+                  </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-sm-4">
+                  <!-- text input -->
+                  <div class="form-group">
+                    <label>Kebele</label>
+                    <input type="text" name="kebele" class="form-control" placeholder="Enter ...">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>Gott</label>
+                    <input type="text" name="gott" class="form-control" placeholder="Enter ...">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>House No</label>
+                      <input type="text" name="house_number" class="form-control" placeholder="Enter ...">
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <!-- text input -->
+                  <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone_number" class="form-control" placeholder="000-000-0000">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="tel" name="mobile_number" class="form-control" placeholder="000-000-0000">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <label>Work Number</label>
+                        <input type="tel" name="work_number" class="form-control" placeholder="000-000-0000">
+                    </div>
+                  </div>
+              </div>
+                <!-- input states -->
+              <div class="form-group">
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>Blood Group</label>
+                   <select name="blood_group" class="form-control">
+                    <option value="A+">A+</option>
+                    <option value="B+">B+</option>
+                    <option value="AB+">AB+</option>
+                    <option value="O+">O+</option>
+                </select>
+                  </div>
+                </div>
+                <label class="col-form-label" for="inputSuccess">Comment</label>
+                <input type="text" class="form-control is-valid" id="inputSuccess" placeholder="Enter ...">
+              </div>
+              <div class="form-group col-md-4">
+                <input type="submit" class="btn btn-success" >
+                <input  value="Cancel" class="btn btn-danger" >
+         <!-- /.card -->
+      </div>
+      </form>
+      </div>
+      </div>
+      </div>
+      </div>
+ {% endblock %}
+ 

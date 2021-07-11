@@ -20,5 +20,11 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('',include('login.urls')),
+    path('physician/',include('physician.urls')),
+    path('hospital_admin/',include('hospital_admin.urls')),
+    path('receptionist/',include('receptionist.urls')),
+    path('nurse/',include('nurse.urls')),
+    path('radiologist/',include('radiologist.urls')),
+    path('lab_technician/',include('lab_technician.urls')),
     path('admin/', admin.site.urls),
 ]
